@@ -1,0 +1,6 @@
+This little script takes a "commands.txt" file (JunOS set Format) and connects to either a single Device or to an IP-List (.txt or xlsx) to commit these commands (no syntax check).
+The File is transferred via scp and then committed using the given username and password.
+The script will not validate the commands in any way so be careful!
+No netconf or other port needed - Port 22 (ssh/scp) is enough :)
+
+Enjoy
