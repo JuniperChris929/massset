@@ -1,9 +1,8 @@
-# Developed by Christian Scholz [Mail: chs@ip4.de, Twitter: @chsjuniper]
-# Feel free to use and modify this script as needed
-# Use at your own risk
-# This is a hobby project - I'm not employed by Juniper
+# Developed by Christian Scholz [Mail: chs@ip4.de, Mastodon: @chsjuniper@mastodon.social, Twitter: @chsjuniper]
+# Feel free to use and modify this script as needed but use at your own risk!
+# This is a hobby project - I'm not employed by Juniper.
 # I just wanted a tool that helps me doing my every day work a bit faster and more consistent
-# Also I'm new to python so this code can possibly be optimized to do more in less lines ;)
+# You've been warned ;)
 
 import sys
 import time
@@ -29,17 +28,17 @@ else:
 varUser = input("Please Enter a Username (not root): ")
 varPassword = getpass.getpass()
 
-version_arg = "1.0.8.82766"
+version_arg = "1.0.9.102902"
 now = datetime.now()
 date_arg = now.strftime("%Y-%m-%d_%H-%M-%S")
 
 # Set up logging
-log = "logfile.log"
+log = "logfile_" + date_arg + ".log"
 logging.basicConfig(filename=log, level=logging.DEBUG, format='%(asctime)s %(message)s', datefmt='%d/%m/%Y %H:%M:%S')
 
 if str(varUser) == 'root':
     sys.exit(
-        'Unfortunately the user root is currently not supported - Please run the tool again and choose another user.')
+        'Which part of NOT root did you not understand? - Please run the tool again and choose another user.')
 
 buff = ''
 resp = ''
@@ -48,7 +47,7 @@ print("\n")
 print("\n")
 print("\n")
 print("###############################################################################")
-print("#                          Version:", version_arg, "                              #")
+print("#                          Version:", version_arg, "                          #")
 print("#            WARNING: Please leave this Window open and running.              #")
 print("#      After the Program is finished, it will automatically close itself.     #")
 print("###############################################################################")
